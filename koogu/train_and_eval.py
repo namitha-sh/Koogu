@@ -319,7 +319,7 @@ def _main(data_feeder, model_dir, data_cfg, model_arch, training_cfg,
     #classifier.save(os.path.join(model_dir, 'classifier.h5'), include_optimizer=False)
     with open(os.path.join(model_dir, 'classifier.json'), 'w') as of:
         of.write(classifier.to_json())
-    classifier.save_weights(os.path.join(model_dir, 'classifier_weights.h5'))
+    classifier.save_weights(os.path.join(model_dir, 'classifier.weights.h5'))
 
     # Write out training history. Include epoch numbers for train & eval
     with open(os.path.join(model_dir, 'training_history.json'), 'w') as of:
